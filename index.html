@@ -20,7 +20,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						//<h1 id="heading">Prasant Kumar Mohanty</h1>
+						<!--<h1 id="heading">Prasant Kumar Mohanty</h1>-->
 	 <h1 id="heading"></h1>
 
     <script>
@@ -37,13 +37,13 @@
             if (currentIndex < text.length) {
                 headingElement.innerHTML += text.charAt(currentIndex);
                 currentIndex++;
-                setTimeout(generateHeading, 100); // Delay between characters (in milliseconds)
+                setTimeout(generateHeading, 1000); // Delay between characters (in milliseconds)
             } else {
                 // Reset currentIndex and text when it reaches the end
                 currentIndex = 0;
                 text = originalText;
                 headingElement.innerHTML = "";
-                setTimeout(generateHeading, 1000); // Delay before starting again (in milliseconds)
+                setTimeout(generateHeading, 100); // Delay before starting again (in milliseconds)
             }
         }
 
