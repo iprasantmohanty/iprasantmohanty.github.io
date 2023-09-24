@@ -21,6 +21,25 @@
 				<!-- Header -->
 					<header id="header">
 						<h1>Prasant Kumar Mohanty</h1>
+	<script>
+        // The text you want to generate character by character
+        var text = "Prasant Kumar Mohanty";
+        
+        // Get the element where you want to display the text
+        var outputElement = document.getElementById("output");
+
+        // Function to generate text character by character
+        function generateText() {
+            if (text.length > 0) {
+                outputElement.innerHTML += text.charAt(0);
+                text = text.slice(1);
+                setTimeout(generateText, 100); // Delay between characters (in milliseconds)
+            }
+        }
+
+        // Call the function to start generating text
+        generateText();
+    </script>
 						<p>PhD Research Scholar, NIT Meghalaya &nbsp;&bull;&nbsp; Computer Science &nbsp;&bull;&nbsp; Explainable AI &nbsp;&bull;&nbsp; Data Science Pro</p>
 						<nav>
 							<ul>
