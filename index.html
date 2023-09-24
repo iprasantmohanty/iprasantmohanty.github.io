@@ -20,10 +20,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1 id="heading">Prasant Kumar Mohanty</h1>
-	<script>
+						//<h1 id="heading">Prasant Kumar Mohanty</h1>
+	 <h1 id="heading"></h1>
+
+    <script>
         // The text you want to generate character by character
-        var text = "Prasant Kumar Mohanty";
+        var originalText = "Prasant Kumar Mohanty";
+        var text = originalText;
         
         // Get the heading element
         var headingElement = document.getElementById("heading");
@@ -35,6 +38,12 @@
                 headingElement.innerHTML += text.charAt(currentIndex);
                 currentIndex++;
                 setTimeout(generateHeading, 100); // Delay between characters (in milliseconds)
+            } else {
+                // Reset currentIndex and text when it reaches the end
+                currentIndex = 0;
+                text = originalText;
+                headingElement.innerHTML = "";
+                setTimeout(generateHeading, 1000); // Delay before starting again (in milliseconds)
             }
         }
 
