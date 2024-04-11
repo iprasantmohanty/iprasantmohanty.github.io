@@ -99,7 +99,10 @@
                 .academic-section td {
                     background-color: #fff;
                 }
-                .academic-section tr:hover {background-color: #D6EEEE;}
+                .academic-section tr:nth-child(even) td {
+                    background-color: #f9f9f9; /* Set a different color for odd rows */
+                }
+                .academic-section tr:hover td {background-color: #D6EEEE;}
             </style>
         </head>
         <body>
@@ -126,7 +129,7 @@
                         <td>July 2021 - </td>
                         
                         <td>9.00/10 CGPA (Course Work)</td>
-                        <td>57</td>
+                        <td>58</td>
                     </tr>
                     <!-- Master of Technology -->
                     <tr>
