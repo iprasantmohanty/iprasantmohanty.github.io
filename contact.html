@@ -73,7 +73,7 @@
                       <div class="form-group">
                         <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
                       </div>
-                      <button type="submit" class="btn btn-default btn-lg">Send</button>
+                      <button type="submit" class="btn btn-default btn-lg" onclick="sendEmail()">Send</button>
                     </div>
                     <div class="col-md-5 address-container">
                       <ul class="list-unstyled">
@@ -141,6 +141,17 @@
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
   });
+  function sendEmail() {
+  var email = document.getElementById('email').value;
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value;
+
+  // Construct mailto URL with email, subject, and message
+  var mailtoLink = 'mailto:prasantmohanty@ieee.org' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+
+  // Open mail client with pre-filled email
+  window.location.href = mailtoLink;
+}
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
