@@ -79,7 +79,7 @@
                       </div>
                       <button type="submit" class="btn btn-default btn-lg" onclick="sendEmail()">Send</button>
                     </div>
-                    <div id="success-message" style="display: none; color: green;">Message sent successfully!</div>
+                    <!--<div id="success-message" style="display: none; color: green;">Message sent successfully!</div>-->
 
                     <div class="col-md-5 address-container">
                       <ul class="list-unstyled">
@@ -166,8 +166,10 @@
   // Open mail client with pre-filled email
   window.location.href = mailtoLink;
 
+    // Display success message in alert box
+    alert("Message sent successfully!");
   // Display success message
-  document.getElementById('success-message').style.display = 'block';
+  //document.getElementById('success-message').style.display = 'block';
 }
 </script>
 
