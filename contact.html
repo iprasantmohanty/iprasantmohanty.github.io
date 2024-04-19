@@ -63,7 +63,9 @@
           
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-               <form action="" class="reveal-content">
+               <!--<form action="" class="reveal-content">-->
+                <form action="" class="reveal-content" onsubmit="sendEmail(event)">
+
                   <div class="row">
                     <div class="col-md-7">
                       <div class="form-group">
@@ -145,10 +147,12 @@
   document.addEventListener("DOMContentLoaded", function (event) {
      navActivePage();
   });
-  function sendEmail() {
+  function sendEmail(event) {
+  event.preventDefault(); // Prevent the form from submitting traditionally
+  
   var email = document.getElementById('email').value;
   var subject = document.getElementById('subject').value;
-  var message = document.getElementById('message').value;
+  var message = document.getElementById('subject').value; // Corrected this line
 
   // Construct mailto URL with email, subject, and message
   var mailtoLink = 'mailto:prasantmohanty@ieee.org' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
