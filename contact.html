@@ -154,6 +154,12 @@
   var subject = document.getElementById('subject').value;
   var message = document.getElementById('subject').value; // Corrected this line
 
+
+   // Check if any of the inputs are empty
+   if (email === "" || subject === "" || message === "") {
+    alert("Please fill in all fields.");
+    return; // Stop further execution
+  }
   // Construct mailto URL with email, subject, and message
   var mailtoLink = 'mailto:prasantmohanty@ieee.org' + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
 
