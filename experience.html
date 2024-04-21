@@ -219,6 +219,8 @@
                     margin: 20px auto;
                     padding: 20px;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    overflow-x: auto;
+                    max-height: 400px; /* Adjust this according to your needs */
                 }
         
                 .academic-section table {
@@ -235,6 +237,9 @@
         
                 .academic-section th {
                     background-color: #f2f2f2;
+                    position: sticky;
+                    top: 0;
+                    z-index: 100;
                 }
         
                 .academic-section td {
@@ -244,12 +249,33 @@
                     background-color: #f5f5f5; /* Set a different color for odd rows */
                 }
                 .academic-section tr:hover td {background-color: #D6EEEE;}
+                  /* Style for the table container */
+                /* Hide scrollbar for thead */
+                #academic-section table thead {
+                    display: block;
+                }
+
+                #academic-section table thead tr {
+                    display: table;
+                    width: 100%;
+                }
+
+                #academic-section table thead th {
+                    width: auto;
+                }
+
+                #academic-section table tbody {
+                    display: block;
+                    overflow-y: auto;
+                    max-height: 300px; /* Adjust this according to your needs */
+                }
             </style>
         </head>
         <body>
             <div class="academic-section">
                 <table>
                     <!-- Header Row -->
+                    <thead>
                     <tr>
                       <th>Sl. No.</th>
                       <th>Subject (Theory / Lab)</th> 
@@ -260,8 +286,10 @@
                       <th>Total Lectures (Theory + Lab) (Hr)</th>
 
                     </tr>
+                  </thead>
+                  <tbody>
                     <tr>
-                      <td colspan="6"><strong>NIST, Berhampur</strong></td>
+                      <td colspan="6"><strong>National Institute of Science and Technology, Brahmapur, Odisha</strong></td>
                     </tr>
                     <tr>
                       <td>6</td>
@@ -313,7 +341,7 @@
                     </tr>
                 
                     
-                    
+                  </tbody>
                 </table>
             </div>
         </body>
