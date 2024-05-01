@@ -188,7 +188,7 @@
     font-size: 24px; /* Font size for the plus sign */
     position: absolute; /* Position the "+" sign relative to the counter */
     top: 50%; /* Align the "+" sign vertically */
-    left: 100%; /* Position the "+" sign to the right of the counter */
+    left: 0%; /* Position the "+" sign to the right of the counter */
     transform: translate(-50%, -50%); /* Center the "+" sign horizontally and vertically */
   }
   .counter.not-enough::after {
@@ -202,13 +202,22 @@
       </style>
       <table>
         <tr>
+
           <td>
-            <div class="counter" id="compilerCounter">10</div>
-            <div class="subject">Compiler Design</div>
+            <div class="counter" id="automataCounter">10</div>
+            <div class="subject">years of Teaching Exprience</div>
+          </td>
+          <td>
+            <div class="counter" id="compilerCounter">12</div>
+            <div class="subject">times tought Compiler Design</div>
+          </td>
+          <td>
+            <div class="counter not-enough" id="automataCounter">11</div>
+            <div class="subject">times tought Automata Theory</div>
           </td>
           <td>
             <div class="counter not-enough" id="automataCounter">8</div>
-            <div class="subject">Automata Theory</div>
+            <div class="subject">times tought Programming Language</div>
           </td>
         </tr>
       </table>
