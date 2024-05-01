@@ -151,7 +151,7 @@
                         <td>Aug 2012 - May 2013</td>
                         
                         
-                        <td>92</td>
+                        <td>74</td>
                     </tr>
                     <!-- VITAM -->
                     <tr>
@@ -173,6 +173,77 @@
         <a class="left carousel-control" href="./academics.html" data-slide="prev">‹</a>
 
         <a class="right carousel-control" href="./publications.html" data-slide="next">›</a>
+     </div>
+     <div class="academic-section">
+      <style>
+         .counter {
+    font-size: 64px; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px;
+    position: relative; /* Set position to relative to use ::after pseudo-element */
+  }
+  .counter::after {
+    content: "+"; /* Add "+" sign after the number */
+    font-size: 24px; /* Font size for the plus sign */
+    position: absolute; /* Position the "+" sign relative to the counter */
+    top: 50%; /* Align the "+" sign vertically */
+    left: 100%; /* Position the "+" sign to the right of the counter */
+    transform: translate(-50%, -50%); /* Center the "+" sign horizontally and vertically */
+  }
+  .counter.not-enough::after {
+    content: ""; /* Empty content for counters that don't need the "+" sign */
+  }
+  .subject {
+    font-size: 20px; /* Font size for the subject */
+    color: #666;
+  }
+
+      </style>
+      <table>
+        <tr>
+          <td>
+            <div class="counter" id="compilerCounter">10</div>
+            <div class="subject">Compiler Design</div>
+          </td>
+          <td>
+            <div class="counter not-enough" id="automataCounter">8</div>
+            <div class="subject">Automata Theory</div>
+          </td>
+        </tr>
+      </table>
+      <script>
+        // Function to update the counter
+        function updateCounter(elementId, targetCount) {
+          var currentCount = parseInt(document.getElementById(elementId).textContent);
+          var increment = Math.ceil((targetCount - currentCount) / 10);
+          var newCount = currentCount + increment;
+          if (increment > 0 && newCount > targetCount) {
+            newCount = targetCount;
+          } else if (increment < 0 && newCount < targetCount) {
+            newCount = targetCount;
+          }
+          document.getElementById(elementId).textContent = newCount;
+          if (newCount !== targetCount) {
+            setTimeout(function() {
+              updateCounter(elementId, targetCount);
+            }, 100);
+          } else {
+            setTimeout(function() {
+              document.getElementById(elementId).textContent = '0'; // Reset the counter to 0
+              setTimeout(function() {
+                updateCounter(elementId, targetCount); // Repeat after 1 seconds
+              }, 1000);
+            }, 1000);
+          }
+        }
+      
+        // Initialize counters
+        window.onload = function() {
+          updateCounter('compilerCounter', 10);
+          updateCounter('automataCounter', 8);
+        };
+      </script>      
      </div>
 
 
