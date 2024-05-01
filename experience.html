@@ -188,7 +188,7 @@
     font-size: 24px; /* Font size for the plus sign */
     position: absolute; /* Position the "+" sign relative to the counter */
     top: 50%; /* Align the "+" sign vertically */
-    left: 0%; /* Position the "+" sign to the right of the counter */
+    left: 50%; /* Position the "+" sign to the right of the counter */
     transform: translate(-50%, -50%); /* Center the "+" sign horizontally and vertically */
   }
   .counter.not-enough::after {
@@ -204,7 +204,7 @@
         <tr>
 
           <td>
-            <div class="counter" id="automataCounter">10</div>
+            <div class="counter" id="expCounter">10</div>
             <div class="subject">years of Teaching Exprience</div>
           </td>
           <td>
@@ -216,8 +216,8 @@
             <div class="subject">times tought Automata Theory</div>
           </td>
           <td>
-            <div class="counter not-enough" id="automataCounter">8</div>
-            <div class="subject">times tought Programming Language</div>
+            <div class="counter not-enough" id="progCounter">8</div>
+            <div class="subject">times tought Programming Languages</div>
           </td>
         </tr>
       </table>
@@ -249,8 +249,10 @@
       
         // Initialize counters
         window.onload = function() {
-          updateCounter('compilerCounter', 10);
-          updateCounter('automataCounter', 8);
+          updateCounter('expCounter', 10);
+          updateCounter('compilerCounter', 12);
+          updateCounter('automataCounter', 11);
+          updateCounter('progCounter', 8);
         };
       </script>      
      </div>
