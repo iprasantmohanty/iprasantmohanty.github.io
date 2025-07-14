@@ -17,96 +17,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <title>Prasant Kumar Mohanty</title>  
+  <style>
+  .scroll-container {
+    width: 100%;
+    overflow: hidden;
+    border: none;
+    margin-top: 20px;
+  }
+
+  .scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+  }
+
+  /* Pause animation on hover */
+  .scroll-container:hover .scroll-content {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .info-box {
+    background-color: #f0f8ff;
+    border: 2px solid #007acc;
+    border-radius: 15px;
+    padding: 10px;
+    width: 180px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .info-box img {
+    height: 32px;
+  }
+
+  .info-box-label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #004080;
+  }
+
+  td {
+    padding: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+</style>
 
 
-      <style>
-
-                .info-box {
-                  background-color: #f0f8ff;  /* Light blue background */
-                  border: 2px solid #007acc;  /* Blue border */
-                  border-radius: 15px;
-                  padding: 10px;
-                  width: 180px;
-                  height: 100px;
-                text-align: center;
-                display: flex;
-                flex-direction: column;.scroll-container {
-            width: 100%;
-            overflow: hidden;
-            border: none;
-            margin-top: 20px;
-          }
-
-          .scroll-content {
-            display: inline-block;
-            white-space: nowrap;
-            animation: scroll-left 30s linear infinite;
-          }
-
-          @keyframes scroll-left {
-            0% {
-              transform: translateX(100%);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-
-          .info-box {
-            background-color: #f0f8ff;
-            border: 2px solid #007acc;
-            border-radius: 10px;
-            padding: 10px;
-            width: 150px;
-            height: 70px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0 10px;
-          }
-
-          .info-box img {
-            height: 32px;
-          }
-
-          .info-box-label {
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #004080;
-          }
-
-          td {
-            padding: 0;
-          }
-
-          table {
-            border-collapse: collapse;
-          }
-                justify-content: center;
-                align-items: center;
-              }
-
-
-
-      .info-box img {
-        height: 32px;
-      }
-
-      .info-box-label {
-        font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 5px;
-        color: #004080;
-      }
-
-      td {
-        padding: 15px;
-      }
-    </style>
-
+      
 <link href="./main.3f6952e4.css" rel="stylesheet"></head>
 
 <body class="">
