@@ -17,68 +17,77 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <title>Prasant Kumar Mohanty</title>  
-  <style>
-  .scroll-container {
-    width: 100%;
-    overflow: hidden;
-    border: none;
-    margin-top: 10px;
-  }
+    <style>
+      .scroll-container {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 20px;
+        position: relative;
+      }
 
-  .scroll-content {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll-left 30s linear infinite;
-  }
+      .scroll-content {
+        display: flex;
+        white-space: nowrap;
+        animation: scroll-left 30s linear infinite;
+      }
 
-  /* Pause animation on hover */
-  .scroll-container:hover .scroll-content {
-    animation-play-state: paused;
-  }
+      .scroll-container:hover .scroll-content {
+        animation-play-state: paused;
+      }
 
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
 
-  .info-box {
-    background-color: #f0f8ff;
-    border: 4px solid #007acc;
-    border-radius: 15px;
-    padding: 10px;
-    width: 180px;
-    height: 100px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-  }
+      .info-box {
+        background-color: #f0f8ff;
+        border: 2px solid #007acc;
+        border-radius: 15px;
+        padding: 10px;
+        width: 180px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        flex-shrink: 0;
+      }
 
-  .info-box img {
-    height: 32px;
-  }
+      .info-box img {
+        height: 32px;
+      }
 
-  .info-box-label {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #004080;
-  }
+      .info-box-label {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #004080;
+      }
 
-  td {
-    padding: 0;
-  }
+      @media (max-width: 600px) {
+        .info-box {
+          width: 140px;
+          height: 90px;
+          margin: 0 5px;
+        }
 
-  table {
-    border-collapse: collapse;
-  }
-</style>
+        .info-box-label {
+          font-size: 12px;
+        }
+
+        .info-box img {
+          height: 28px;
+        }
+      }
+    </style>
+
 
 
       
@@ -212,68 +221,62 @@
        
       
     </table>-->
-    <div class="scroll-container">
-  <div class="scroll-content">
-    <!-- Repeat all your <td><div class="info-box">...</div></td> content here -->
-    <table>
-      <tr style="text-align: center;">
-        <td>
-          <div class="info-box">
-            <div class="info-box-label">Google Scholar</div>
-            <a href="https://scholar.google.com/citations?hl=en&user=9jUCIZQAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">
-              <img src="./assets/images/64px-Google_Scholar_logo.svg.png" alt="Google Scholar">
-            </a>
-          </div>
-        </td>
-        <td>
-          <div class="info-box">
-            <div class="info-box-label">Scopus</div>
-            <a href="https://www.scopus.com/authid/detail.uri?authorId=58144930000" target="_blank">
-              <img src="./assets/images/Scopus_Elsevier_d2a0bfe14d.png" alt="Scopus">
-            </a>
-          </div>
-        </td>
-        <td>
-          <div class="info-box">
-            <div class="info-box-label">ORCID</div>
-            <a href="https://orcid.org/0000-0001-5947-2043" target="_blank">
-              <img src="./assets/images/ORCID_iD.svg.png" alt="ORCID">
-            </a>
-          </div>
-        </td>
-        <td>
-          <div class="info-box">
-            <div class="info-box-label">Web of Science</div>
-            <a href="https://www.webofscience.com/wos/author/record/KVZ-1740-2024" target="_blank">
-              <img src="./assets/images/wos.png" alt="WOS">
-            </a>
-          </div>
-        </td>
-        <td>
-          <div class="info-box">
-            <div class="info-box-label">Institute Webpage</div>
-            <a href="https://srmap.edu.in/faculty/mr-prasant-kumar-mohanty/" target="_blank">
-              <img src="./assets/images/SRMAP-Logo.png" alt="SRM AP">
-            </a>
-          </div>
-        </td>
-        <td>
-          <div class="info-box">
-            <div class="info-box-label">Personal Webpage</div>
-            <a href="https://iprasantmohanty.github.io" target="_blank">
-              <img src="./assets/images/pm_srm.jpg" alt="Personal Webpage">
-            </a>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-</div>
+  
 
   </div>
 </div>
 </div>
 </div>
+
+  <div class="scroll-container" id="scrollContainer">
+  <div class="scroll-content" id="scrollContent">
+    <div class="info-box">
+      <div class="info-box-label">Google Scholar</div>
+      <a href="https://scholar.google.com/citations?hl=en&user=9jUCIZQAAAAJ" target="_blank">
+        <img src="./assets/images/64px-Google_Scholar_logo.svg.png" alt="Google Scholar">
+      </a>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-label">Scopus</div>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=58144930000" target="_blank">
+        <img src="./assets/images/Scopus_Elsevier_d2a0bfe14d.png" alt="Scopus">
+      </a>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-label">ORCID</div>
+      <a href="https://orcid.org/0000-0001-5947-2043" target="_blank">
+        <img src="./assets/images/ORCID_iD.svg.png" alt="ORCID">
+      </a>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-label">Web of Science</div>
+      <a href="https://www.webofscience.com/wos/author/record/KVZ-1740-2024" target="_blank">
+        <img src="./assets/images/wos.png" alt="Web of Science">
+      </a>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-label">Institute Webpage</div>
+      <a href="https://srmap.edu.in/faculty/mr-prasant-kumar-mohanty/" target="_blank">
+        <img src="./assets/images/SRMAP-Logo.png" alt="SRM AP">
+      </a>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-label">Personal Webpage</div>
+      <a href="https://iprasantmohanty.github.io" target="_blank">
+        <img src="./assets/images/pm_srm.jpg" alt="Personal Webpage">
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
 <div class="section-container">
     <div class="container">
       <div class="row">
@@ -373,6 +376,16 @@
   ga('send', 'pageview');
 </script>
 
---> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+--> <script type="text/javascript" src="./main.70a66962.js"></script>
+
+ <!-- ✅ JavaScript goes here -->
+  <script>
+    // Clone the scroll content once to create infinite loop effect
+    const scrollContent = document.getElementById('scrollContent');
+    const clone = scrollContent.cloneNode(true);
+    scrollContent.parentNode.appendChild(clone);
+  </script>
+
+</body>
 
 </html>
