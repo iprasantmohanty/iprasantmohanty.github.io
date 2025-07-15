@@ -58,6 +58,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 10px;
+    flex-shrink: 0;  /* 👈 prevents shrinking in flex row */
   }
 
   .info-box img {
@@ -213,7 +214,7 @@
       
     </table>-->
     <div class="scroll-container">
-  <div class="scroll-content">
+  <div class="scroll-content" id="scrollContent">
     <!-- Repeat all your <td><div class="info-box">...</div></td> content here -->
     <table>
       <tr style="text-align: center;">
@@ -377,10 +378,8 @@
 
  <!-- ✅ JavaScript goes here -->
   <script>
-    // Clone the scroll content once to create infinite loop effect
     const scrollContent = document.getElementById('scrollContent');
-    const clone = scrollContent.cloneNode(true);
-    scrollContent.parentNode.appendChild(clone);
+    scrollContent.innerHTML += scrollContent.innerHTML; // ✅ Append a clone inline
   </script>
 
 </body>
