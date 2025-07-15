@@ -378,8 +378,10 @@
 
  <!-- ✅ JavaScript goes here -->
   <script>
-    const scrollContent = document.getElementById('scrollContent');
-    scrollContent.innerHTML += scrollContent.innerHTML; // ✅ Append a clone inline
+     const scrollContent = document.getElementById('scrollContent');
+  // Clone the content only once to enable seamless loop
+  const clone = scrollContent.innerHTML;
+  scrollContent.innerHTML += clone;
   </script>
 
 </body>
