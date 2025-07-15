@@ -26,9 +26,11 @@
   }
 
   .scroll-content {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: flex;
+    flex-wrap: nowrap; /* ❗Important: prevents second row */
     white-space: nowrap;
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 50s linear infinite;
   }
 
   /* Pause animation on hover */
